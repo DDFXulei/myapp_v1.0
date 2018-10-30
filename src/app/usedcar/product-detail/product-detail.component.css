@@ -1,0 +1,466 @@
+div, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+.pg-used-detail .banner {
+  padding: 40px 0 64px;
+}
+
+.pg-used-detail .container {
+  width: 1200px;
+}
+.container {
+  padding: 0 15px;
+}
+.g-clear:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pg-used-detail .banner .banner-left {
+  border: 1px solid #f5f5f5;
+  height: 420px;
+  width: 560px;
+  position: relative;
+}
+.fl {
+  float: left;
+}
+.pg-used-detail .banner .banner-left .show-img {
+  position: absolute;
+  padding: 0 10px;
+  bottom: 20px;
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  background: rgba(26,26,26,.4);
+  font-size: 12px;
+  cursor: pointer;
+}
+.pg-used-detail .banner .banner-left .show-img img {
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+.pg-used-detail .banner .banner-left .car-code {
+  position: absolute;
+  padding: 0 10px;
+  bottom: 24px;
+  right: 24px;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  background: rgba(26,26,26,.4);
+  border-radius: 12px;
+}
+.fs12 {
+  font-size: 12px;
+}
+.pg-used-detail .banner .banner-left .toast-user {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  right: 24px;
+}
+.co-car-used-info .car {
+  position: relative;
+  width: 578px;
+  padding-left: 40px;
+}
+.fr {
+  float: right;
+}
+.co-car-used-info .car .car-base .title {
+  font-weight: 700;
+}
+.fs20 {
+  font-size: 20px;
+}
+.co-car-used-info .car .car-base .info {
+  padding: 10px 0 14px;
+}
+.text-gray {
+  color: #8d8e99;
+}
+.co-car-used-info .car .car-base .info .attention {
+  padding: 20px 0;
+}
+.pg-used-detail .pointer {
+  cursor: pointer;
+}
+.co-car-used-info .car .car-base .info .attention img {
+  vertical-align: sub;
+}
+.co-car-used-info .car .sp-line {
+  display: inline-block;
+  border-right: 1px solid #d9d9d9;
+  height: 10px;
+  margin: 0 4px;
+  position: relative;
+  top: 1px;
+}
+.co-car-used-info .car .car-base .info .tax {
+  margin-top: 7px;
+}
+s, strike, del {
+  text-decoration: line-through;
+}
+.co-popover {
+  display: inline-block;
+  position: relative;
+}
+.co-popover .v-popover-tag {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.co-car-used-info .car .car-base .info .tax .tax-icon {
+  position: relative;
+  top: -2px;
+}
+.co-popover .v-popover {
+  /*display: none;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 1px;
+  -webkit-box-shadow: 2px 2px 10px #ccc;
+  box-shadow: 2px 2px 10px #ccc;
+}
+.co-popover .v-popover .popover-arrow-up {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  height: 10px;
+}
+.co-popover .v-popover .popover-arrow-up .popover-arrow-up-icon {
+  display: block;
+}
+.co-car-used-info .car .car-base .info .tax .tax-popover-content {
+  width: 168px;
+}
+.co-car-used-info .car .car-base .info .tax .tax-popover-content .el-row {
+  height: 25px;
+  line-height: 25px;
+}
+.el-row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.el-col-24 {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.co-car-used-info .car .car-base .info .tax .tax-popover-content .el-row {
+  height: 25px;
+  line-height: 25px;
+}
+.co-car-used-info .car .car-base .info .tax .tax-popover-content .border-bottom {
+  margin: -2px 0 6px;
+}
+.pg-used-detail .border-bottom {
+  border-bottom: 1px solid #ebedf0;
+}
+.co-car-used-info .car .car-base .info .tax .tax-popover-content .border-bottom .border-arrow-up {
+  position: relative;
+  left: 138px;
+  bottom: -2px;
+  height: 8px;
+  display: block;
+}
+.text-right {
+  text-align: right;
+}
+.text-primary {
+  color: #ff4d30 !important;
+}
+.co-car-used-info .car .tag-list {
+  background-color: #f7f8fa;
+}
+.co-car-used-info .car .tag-list .tag-list-item:first-child {
+  padding: 16px;
+}
+.co-car-used-info .car .tag-list .tag-list-item {
+  overflow: hidden;
+  padding: 0 16px 16px;
+}
+.co-car-used-info .car .tag-list .tag-list-item .tag-list-img {
+  margin-right: 7px;
+}
+.co-car-used-info .car .tag-list .tag-list-item .tag-list-content {
+  max-width: 374px;
+}
+.g-ellipse {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.co-car-used-info .car .car-finance {
+  padding: 30px 0 26px;
+}
+.co-car-used-info .car .car-finance .title, .co-car-used-info .car .car-pay-plan .title {
+  font-weight: 700;
+  color: #1a1d33;
+  height: 16px;
+  line-height: 16px;
+  background: url('../../../assets/img/header.png') no-repeat 0;
+  background-size: contain;
+  margin-bottom: 14px;
+  padding: 2px 0 2px 13px;
+}
+.co-car-used-info .car .car-finance .money {
+  background-color: #f7f8fa;
+  margin-bottom: 12px;
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+.co-car-used-info .car .car-finance .money .item:first-child {
+  border-left: none;
+}
+.co-car-used-info .car .car-finance .money .item:first-child:after {
+  background: transparent;
+}
+.co-car-used-info .car .car-finance .tips .scheme-tags, .co-car-used-info .car .car-pay-plan .tips .scheme-tags {
+  margin-bottom: 6px;
+}
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+.co-car-used-info .car .car-finance .tips .scheme-tags span, .co-car-used-info .car .car-pay-plan .tips .scheme-tags span {
+  display: inline-block;
+  color: #ff5719;
+  margin-right: 8px;
+  padding: 1px 5px;
+  border: none;
+  font-size: 12px;
+  background-color: rgba(255,87,26,.1);
+  position: relative;
+}
+.co-car-used-info .car .car-finance .tips .scheme-tags span:after, .co-car-used-info .car .car-pay-plan .tips .scheme-tags span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #ff571a;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-radius: 2px;
+}
+.text-blue {
+  color: #5c9ee6;
+}
+.co-car-used-info .car .car-finance .tips .final-payment, .co-car-used-info .car .car-pay-plan .tips .final-payment {
+  margin-bottom: 5px;
+}
+.co-car-used-info .car .car-finance .tips .final-payment span, .co-car-used-info .car .car-pay-plan .tips .final-payment span {
+  color: #ff5517;
+  line-height: 1;
+}
+.fs18 {
+  font-size: 18px;
+}
+.co-car-used-info .car .car-finance .tips p, .co-car-used-info .car .car-pay-plan .tips p {
+  margin-bottom: 2px;
+}
+.pg-used-detail .car-btn {
+  padding-top: 38px;
+}
+.co-prompt {
+  display: inline-block;
+  position: relative;
+}
+.co-prompt .v-prompt-tag {
+  display: inline-block;
+  cursor: pointer;
+}
+.pg-used-detail .car-btn .appointment {
+  font-weight: 700;
+  width: 260px;
+  text-align: center;
+  background-color: #ffc400;
+}
+.pg-used-detail .car-btn .appointment.right{
+  font-weight: 700;
+  width: 260px;
+  text-align: center;
+  background-color: #c1c1c1 !important;
+}
+.pg-used-detail .car-btn .appointment, .pg-used-detail .car-btn .sell-phone {
+  height: 48px;
+  line-height: 48px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/*
+    咨询对话框
+ */
+.su-model {
+  z-index: 2016;
+  opacity: .4;
+  background: #000;
+}
+.su-dialog__wrapper .su-size-middle, .su-model .su-size-middle {
+  width: 640px;
+  height: 550px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.su-dialog__wrapper .su-dialog, .su-model .su-dialog {
+  padding: 15px 40px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.su-dialog__wrapper .su-size-middle, .su-model .su-size-middle {
+  width: 640px;
+  height: 550px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.su-dialog__wrapper .su-dialog, .su-model .su-dialog {
+  padding: 15px 40px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.su-dialog__wrapper .su-dialog .su-dialog__header, .su-model .su-dialog .su-dialog__header {
+  padding: 7px 0 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.su-dialog__wrapper .su-dialog .su-dialog__close, .su-model .su-dialog .su-dialog__close {
+  float: right;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.su-dialog__wrapper .su-dialog .su-dialog__header, .su-model .su-dialog .su-dialog__header {
+  padding: 7px 0 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.co-car-appointment-store .dialog-appointment-form {
+  margin: 0 auto;
+}
+.co-form .form-item {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.g-clear:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.co-form .form-item .label {
+  font-size: 12px;
+  text-align: right;
+  padding-right: 35px;
+  line-height: 35px;
+}
+@media all and (min-width: 1200px){
+  .el-col-md-6 {
+    width: 25%;
+  }
+  .el-col-md-15 {
+    width: 62.5%;
+  }
+  .pg-used-detail{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .el-col-md-12 {
+    width: 50%;
+  }
+}
+  .el-col-24 {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.el-col-24 {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.co-form-input .input-box {
+  position: relative;
+}
+.co-form-input .input-box .input {
+  height: 35px;
+  padding: 0 10px;
+  border: 1px solid #ebedf0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+.fs14 {
+  font-size: 14px;
+}
+.co-form-input .input-box .suffix {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.co-form-input .input-box .input:valid+.suffix>.clear-input {
+  display: inline-block;
+}
+.co-form-input .input-box .suffix .clear-input {
+  display: none;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: auto;
+  text-decoration: underline;
+}
+.co-car-appointment-store .plan .plan-body .row {
+  padding: 16px 0;
+}
+.su-dialog__wrapper, .su-model {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 2017;
+}

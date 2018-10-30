@@ -1,0 +1,19 @@
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  cursor: pointer;
+}
+a:link, a:visited{
+  color: #1c1f21;
+}
+h5{
+  font-size: x-large;
+}
+.active {
+  font-weight: 700;
+  background-color: #fff !important;
+  border-bottom: 2px solid #1b1c33;
+}
+

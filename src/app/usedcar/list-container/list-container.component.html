@@ -1,0 +1,71 @@
+<app-header-search [sortBy]="sortBy" [sortMode]="sortMode"></app-header-search>
+<div class="co-list-select-menu">
+  <div class="order-by g-clear">
+    <div class="result-num fs20">为您找到&nbsp;{{vinCount}}&nbsp;款二手车</div>
+    <div class="order-by-item fs14 g-flex">
+        <span *ngFor="let item of filterItems"
+              [class.down]="item.isDown"
+              [class.active]="item.isActived"
+              (mouseleave)="labelLeave(item)"
+              (mouseover)="labelOver(item)"
+              (click)="labelClick(item)"
+        >
+          {{item.key}}
+          <i *ngIf="item.hasScrow"  [class.active]="item.isActived||clickActive"></i>
+        </span>
+    </div>
+  </div>
+</div>
+
+<div class="co-list-container">
+
+  <div *ngIf="vinCount===0" class="intention-container">
+    <div class="non-car">
+      <p>暂无相关车辆</p>
+    </div>
+    <img src="//img.souche.com/f2e/83e00019f3247150703f7e9da74e52d0.png"
+         width="100%" alt="" class="attention-img pointer box-shadow">
+  </div>
+
+  <div class="co-car-list">
+    <div class="car-list g-clear">
+      <!--<div class="el-row" style="margin-left:-10px; margin-right:-10px;">-->
+        <div *ngFor="let usedCar of usedCarList" class="el-col el-col-24 el-col-md-6 el-col-lg-6" style="padding-left: 10px; padding-right: 10px;">
+          <a  [routerLink]="['/usedcar/productDetail', usedCar.productCode]" class="used-list list-item fs12">
+            <img width="100%" height="100%" alt="{{usedCar.productName}}" class="oss-image series-img"
+                               data-src="//img.souche.com/files/default/1e830e164176b117209b8955922ef9be.jpg?x-oss-process=image/resize,w_260,p_300,h_194,m_fill"
+                               src="{{usedCar.indexImg}}"
+                               lazy="loaded">
+          <img src="../../../assets/img/26a94ddba1d4e278d53cadb4be8382d8.png"
+               class="scrip-img">
+          <div class="tag-img-container" >
+            <i class="shou-fu-zhijiang" *ngIf="isZhijiang"></i>
+            <i class="wu-percent-shoufu" *ngIf="isPercent"></i><!---->
+            <i class="ji-su-tiche"  *ngIf="isJisu"></i>
+            <i class="zhun-xinche" *ngIf="isJisu"></i>
+          </div>
+          <div class="car-text">
+            <p class="series-name fs16 g-ellipse text-bold">{{usedCar.brandName}}{{usedCar.seriesName}}</p>
+            <p class="model-name fs16 g-ellipse text-bold">{{usedCar.productName}}</p>
+            <p class="guide-price">
+              {{usedCar.vehicleLocation}}
+              <span class="vertical-split-line"></span>
+              {{usedCar.firstRegister | date: 'y-MM-dd'}}
+              <span class="vertical-split-line"></span>
+              {{usedCar.dashMilieage}}万公里
+              <span class="vertical-split-line"></span>
+              {{usedCar.enterDate | date: 'y-MM-dd'}}上架
+            </p>
+            <p class="g-ellipse">
+              <span class="prepaid-amount fs16">首付 {{usedCar.lastDownPay}}万</span>
+              <s class="text-gray">{{usedCar.oldDownPay}}万</s>
+              <span class="installment text-primary fs14">月供{{usedCar.monthlyPayment}}元</span></p></div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+<!--</div>-->

@@ -1,0 +1,14 @@
+<div class="other-item">
+
+  <div class="content">
+    <div class="select" [class.open]="yuegongOpen">
+      <p (click)="toggleClick($event)" class="su-select" style="width: 134px; height: 36px;">
+        {{selectedPayValue>0 ? selectedDataValue:'月供' }}
+      </p>
+      <ul>
+        <li *ngFor="let item of monthlyPayItem;let i = index" (click)="paySelect($event,i)" [title]="item.selKey" [value]="item.selValue" [ngClass]="{active: item.isActived}">{{item.selKey}}</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

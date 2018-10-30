@@ -9,14 +9,26 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 //import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 //import { MyTableComponent } from './my-table/my-table.component';
 import {RouterModule} from "@angular/router";
+import { HttpClientModule } from '@angular/common/http';
 
 import {appRooutes} from "./app.router";
+import { LoginComponent } from './login/login.component';
+import {HeaderComponent} from './header/header.component';
+import {RightNavComponent} from "./shared/right-nav/right-nav.component";
+import {FooterComponent} from "./footer/footer.component";
+import { MySelectComponent } from './shared/my-select/my-select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    HeaderComponent,
+    RightNavComponent,
+    FooterComponent,
+    MySelectComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -31,7 +43,7 @@ import {appRooutes} from "./app.router";
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    RouterModule.forRoot(appRooutes)
+    RouterModule.forRoot(appRooutes),
   ],
   providers: [],
   bootstrap: [AppComponent]

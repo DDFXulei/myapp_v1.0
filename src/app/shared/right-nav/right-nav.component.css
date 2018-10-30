@@ -1,0 +1,55 @@
+.co-side-bar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 2;
+}
+.co-side-bar .side {
+  width: 48px;
+}
+.co-side-bar .side .side-icon {
+  cursor: pointer;
+  background-color: #fff;
+}
+.co-side-bar .side .app .qr, .co-side-bar .side .wx .qr {
+  padding: inherit;
+  width: auto;
+}
+.co-side-bar .side .qr {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 140px;
+  display: none;
+}
+.co-side-bar .side .active .side-icon{
+  background-color: #ebedf0;
+}
+.co-side-bar .side .active {
+  position: relative;
+}
+.co-side-bar .side .active .qr {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 57px;
+  -webkit-box-shadow: 0 2px 12px rgba(0,0,0,.1);
+  box-shadow: 0 2px 12px rgba(0,0,0,.1);
+
+}
+.co-side-bar img {
+  vertical-align: middle;
+}
+
+.co-side-bar .side .phone .qr {
+  with:140px;
+  text-align: right;
+  padding: 16px;
+  font-size: 12px;
+}
+.number{
+  font-size: 1rem;
+}
+.co-side-bar .side .side-icon img {
+  display: block;
+}

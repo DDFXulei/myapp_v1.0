@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-lg-4"*ngFor="let item of busItem;let i = index">
+          <img class="rounded-circle" src="http://temp.im/140x140/#fff" alt="Generic placeholder image" width="140" height="140">
+          <h2>{{item.title}}</h2>
+          <p>{{item.secondTitle}}</p>
+          <p><a class="btn btn-secondary" href="#" role="button" [routerLink]="item.routeInfo">{{item.btnName}} &raquo;</a></p>
+  </div>
+</div>

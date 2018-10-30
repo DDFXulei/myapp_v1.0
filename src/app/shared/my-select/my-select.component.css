@@ -1,0 +1,83 @@
+.other-item {
+  display: inline-block;
+  font-size: 14px;
+  width: 80px;
+  margin-right: 20px;
+  text-align: center;
+}
+.content,.select,ul{
+  margin:0;
+  font-size: 14px;
+}
+.content .select{
+  height:40px;
+  margin:0 auto;
+  font-family:"Microsoft Yahei";
+  font-size:16px;
+  background-color: #fff;
+  position:relative;
+}
+/*增加小箭头*/
+.content .select:after{
+  content:'';
+  display: block;
+  width:10px;
+  height:10px;
+  border-left:1px #cccccc solid;
+  border-bottom: 1px #cccccc solid;
+  position:absolute;
+  top:11px;
+  right:12px;
+  transform: rotate(-45deg);
+}
+.content .select p{
+  padding: 0 12px;
+  line-height:40px;
+}
+.content .select ul{
+  background-color:#fff;
+  padding: 0 12px;
+  max-height: 0;
+  width:100%;
+  overflow: hidden;/*隐藏滚动条*/
+  position:absolute;
+  top:40px;
+  left:0;
+  transition:max-height .3s ease-out;
+  z-index: 10;
+}
+.content .select ul li{
+  line-height: 40px;
+  cursor: pointer;
+}
+.content .select ul li:hover{
+  color: #ff0000;
+}
+.content .select ul li.active{
+  color: #f0a800;
+}
+.content .select ul li.active:hover{
+  color: #ff0000;
+}
+@-webkit-keyframes slide-down {
+  0%{transform: scale(1,0)}
+  25%{transform: scale(1,1.2)}
+  50%{transform: scale(1,0.85)}
+  75%{transform: scale(1,1.05)}
+  100%{transform: scale(1,1)}
+} keyframes  {
+  }
+
+.content .select.open ul{
+  max-height: 250px;/*设置展开后下拉框的最大高度*/
+  -webkit-animation: slide-down .5s ease-in;
+  transform-origin: 50% 0;
+  transition:max-height .3s ease-in;/*设置过渡效果，从高度0-高度250px*/
+  display:block;
+  border: 1px #ebedf0 solid ;
+}
+.content .select.open:after{
+  transform: rotate(-225deg);
+  top:18px;
+  transition: all .3s ease-in;
+}

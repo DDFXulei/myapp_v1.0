@@ -1,0 +1,12 @@
+<div *ngFor="let m of market;let i = index">
+  <hr class="featurette-divider">
+  <div class="row featurette">
+    <div class="col-md-7 {{ i%2 != 0? 'order-md-2':''}}">
+      <h2 class="featurette-heading">{{m.title}}<span class="text-muted"> {{m.secondTitle}} </span></h2>
+      <p class="lead">{{m.content}}</p>
+    </div>
+    <div class="col-md-5 {{ i%2 != 0? 'order-md-1':''}}">
+      <img class="featurette-image img-fluid mx-auto" src = {{m.imgSrc}} data-src= {{m.dataSrc}} alt={{m.imgAlt}}>
+    </div>
+  </div>
+</div>

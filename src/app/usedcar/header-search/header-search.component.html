@@ -1,0 +1,180 @@
+
+<div class="co-list-select-menu" >
+  <ul class="menu-list fs14">
+    <li class="g-flex menu-item">
+      <span class="select-item">品牌</span>
+      <div class="flex-1 brand-item" [ngSwitch]="ngSwitch">
+        <div>
+          <div>
+            <span *ngFor="let tab of tabD,let i=index" class="item-tag " [class.active]="tab.isActive"
+              (mouseover)="mouseoverTag(i)"
+                  (click)="tabClick(tab.key)"
+            >{{tab.key}}</span>
+           </div>
+        </div>
+        <div class="brand-list" >
+          <div *ngSwitchDefault>
+            <span *ngFor="let brand of brandList[0]" (click)="brandClick(brand)" class="item-tag" [class.active]="brand.isActive">{{brand.brandName}}</span>
+          </div>
+          <div *ngSwitchCase= "1">
+            <span *ngFor="let brand of brandList[1]" (click)="brandClick(brand)" class="item-tag" [class.active]="brand.isActive">{{brand.brandName}}</span>
+          </div>
+          <div *ngSwitchCase= "2">
+            <span *ngFor="let brand of brandList[2]" (click)="brandClick(brand)" class="item-tag"[class.active]="brand.isActive" >{{brand.brandName}}</span>
+          </div>
+          <div *ngSwitchCase= "3">
+            <span *ngFor="let brand of brandList[3]" (click)="brandClick(brand)" class="item-tag" [class.active]="brand.isActive">{{brand.brandName}}</span>
+          </div>
+          <div *ngSwitchCase= "4">
+            <span *ngFor="let brand of brandList[4]" (click)="brandClick(brand.brandName)" class="item-tag" [class.active]="brand.isActive">{{brand.brandName}}</span>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="g-flex menu-item">
+      <span class="select-item">车系</span>
+      <div class="select-content flex-1">
+        <span *ngFor="let series of seriesOptions" class="item-tag"
+              [class.active]="series.isActive" (click)="seriesClick(series)">{{series.seriesName}}</span>
+      </div>
+
+    </li>
+    <li class="g-flex menu-item">
+      <span class="select-item">首付</span>
+      <div class="select-content flex-1 brand-item">
+        <span *ngFor="let downPayOption of downPayOptions"  class="item-tag"
+              (click)="downPayClick(downPayOption)" [class.active]="downPayOption.isActive">{{downPayOption.payMode}}</span>
+      </div>
+    </li>
+    <li class="g-flex menu-item">
+      <span class="select-item">车价</span>
+      <div class="select-content flex-1 brand-item">
+        <span *ngFor="let vehPriceOption of vehPriceOptions" (click)="vehPriceClick(vehPriceOption)" class="item-tag" [class.active]="vehPriceOption.isActive">
+          {{vehPriceOption.vehPrice}}</span>
+      </div>
+    </li>
+    <li class="g-flex menu-item"><span class="select-item">其他</span>
+      <div class="select-content flex-1">
+        <div class="other-item">
+          <div class="content">
+            <div class="select" [class.open]="monthlyPayOpen">
+              <p (click)="toogleMonthlyPay()" class="su-select" style="width: 134px; height: 36px;">
+                {{selectedMonthlyPay&&selectedMonthlyPay.monthlyPay!= '全部'? selectedMonthlyPay.monthlyPay: '月供'}}
+              </p>
+              <ul (mouseleave)="leaveMonthlyPayOptions()">
+                <li *ngFor="let monthlyPayOption of monthlyPayOptions;"
+                    (click)="monthlyPaySelect(monthlyPayOption)"
+                    [class.active]="monthlyPayOption.isActive">
+                  {{monthlyPayOption.monthlyPay}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="other-item">
+          <div class="content">
+            <div class="select" [class.open]="vehicleAgeOpen">
+              <p (click)="toogleVehicleAge()" class="su-select" style="width: 134px; height: 36px;">
+                {{selectedVehicleAge&&selectedVehicleAge.vehicleAge!= '全部'? selectedVehicleAge.vehicleAge: '车龄'}}
+              </p>
+              <ul (mouseleave)="leaveVehicleAgeOptions()">
+                <li *ngFor="let vehicleAgeOption of vehicleAgeOptions;"
+                    (click)="vehicleAgeSelect(vehicleAgeOption)"
+                    [class.active]="vehicleAgeOption.isActive">
+                  {{vehicleAgeOption.vehicleAge}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="other-item">
+          <div class="content">
+            <div class="select" [class.open]="vehicleMileageOpen">
+              <p (click)="toogleVehicleMileage()" class="su-select" style="width: 134px; height: 36px;">
+                {{selectedVehicleMileage&&selectedVehicleMileage.vehMileage!= '全部'? selectedVehicleMileage.vehMileage: '里程'}}
+              </p>
+              <ul (mouseleave)="leaveVehicleMileageOptions()">
+                <li *ngFor="let vehicleMileageOption of vehicleMileageOptions;"
+                    (click)="vehicleMileageSelect(vehicleMileageOption)"
+                    [class.active]="vehicleMileageOption.isActive">
+                  {{vehicleMileageOption.vehMileage}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="other-item">
+          <div class="content">
+            <div class="select" [class.open]="vehicleTypeOpen">
+              <p (click)="toogleVehicleType()" class="su-select" style="width: 134px; height: 36px;">
+                {{selectedVehicleType&&selectedVehicleType.vehicleType!= '全部'? selectedVehicleType.vehicleType: '车型'}}
+              </p>
+              <ul (mouseleave)="leaveVehicleTypeOptions()">
+                <li *ngFor="let vehicleTypeOption of vehicleTypeOptions;"
+                    (click)="vehicleTypeSelect(vehicleTypeOption)"
+                    [class.active]="vehicleTypeOption.isActive">
+                  {{vehicleTypeOption.vehicleType}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="other-item">
+          <div class="content">
+            <div class="select su-select__options" [class.open]="vehicleColorOpen">
+              <p (click)="toogleVehicleColor()" class="su-select" style="width: 134px; height: 36px;">
+                {{selectedVehicleColor&&selectedVehicleColor.vehicleColor!= '全部'? selectedVehicleColor.vehicleColor: '颜色'}}
+              </p>
+              <ul (mouseleave)="leaveVehicleColorOptions()">
+                <li *ngFor="let vehicleColorOption of vehicleColorOptions"
+                    (click)="vehicleColorSelect(vehicleColorOption)"
+                    [class.active]="vehicleColorOption.isActive"
+                >
+                  <img *ngIf="vehicleColorOption.colorImg!= null" [src]="vehicleColorOption.colorImg">
+                  {{vehicleColorOption.vehicleColor}}
+              <!---->
+                </li>
+              </ul>
+           </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="g-flex menu-item" *ngIf="usedCarSearchParams.vehicleSeries != '-1' || usedCarSearchParams.vehicleBrand != '-1'"><span class="select-item">已选条件</span>
+      <div class="select-content flex-1  other-select">
+        <div class="selected-tag" *ngIf="selectedBrand"><span>品牌：{{selectedBrand}}</span>
+          <div (click)="colseBrand()"></div>
+        </div>
+        <div class="selected-tag" *ngIf="selectedSeries"><span>车系：{{selectedSeries}}</span>
+          <div (click)="closeSeries()"></div>
+        </div>
+        <div class="selected-tag" *ngIf="selectedLastDownPay"><span>首付：{{selectedLastDownPay.payMode}}</span>
+          <div (click)="closeDownPay()"></div>
+        </div>
+        <div class="selected-tag" *ngIf="selectedVehiclePrice"><span>车价：{{selectedVehiclePrice.vehPrice}}</span>
+          <div (click)="closeVehiclePrice()"></div>
+        </div>
+        <div class="selected-tag" *ngIf="selectedMonthlyPay"><span>月供：{{selectedMonthlyPay.monthlyPay}}</span>
+          <div (click)="closeMonthlyPay()"></div>
+        </div>
+        <div class="selected-tag"  *ngIf="selectedVehicleAge"><span>车龄：{{selectedVehicleAge.vehicleAge}}</span>
+          <div (click)="closeVehicleAge()"></div>
+        </div>
+        <div class="selected-tag" *ngIf="selectedVehicleMileage"><span>里程：{{selectedVehicleMileage.vehMileage}}</span>
+          <div (click)="closeVehicleMileage()"></div>
+        </div>
+        <div class="selected-tag" *ngIf="selectedVehicleType"><span>车型：{{selectedVehicleType.vehicleType}}</span>
+          <div (click)="closeVehicleType()"></div>
+        </div>
+        <div class="selected-tag"  *ngIf="selectedVehicleColor"><span>颜色：{{selectedVehicleColor.vehicleColor}}</span>
+          <div (click)="closeVehicleColor()"></div>
+        </div>
+
+        <div class="reset-btn" (click)="resetSelected()"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAA5NJREFUWAntVk1IVFEUvue9GUe0Hy2lKIUwoUWLyFq5KKxFP7YIgqFIgkQdnCFHrIWrFlGmgfNGQ2FGzSKLmKiIINuEOw36UQiKnF01EhaM4fgzOvNu507dmefzvpmnLVrk25xzz/2+c88995x7HyFr3z/OAPzt+j6fb2NkFpwEIFS2p/R+RUVFbCU+pZWARdjILOkhlLYQVb0zOhZ83dHRs0+EM7KtOgNdXYF18/HpnSQWe4HOt/IFACBOCVFge97lJrt9jtuNpMVoQmRXlP48QhZrKKFn5qPhMhGGUiqj/RIJhUtQnhJhtDbTASiKr0alC9eRXKB1YKRTSg4YzWntGQMYGhqyjI4Gu1VKa7XEdDoeAyVAW9Nh+FzGInw3FvRhyvWLfyASNBOZHAIgn7kzJrGoQliUR5saHe1au5GeNgO/006rNWQVCFwtKsq7Yrfb48yuKP5BDNDBdJx7kJ2d63Q6z4bZ2MxnGEBfX9/6qZ8xduaJD3e6SCVypMldN8RtTObk0AuROfLSgveA2103rJ0zoxsGMDUdd6KDZMFha7VedDuWLM4WcDgciygeMn01n2EAhKZaCHf/ySIXX1vNApk4wiLs7r6Xj8W0P0mm5HZDw/FocrxCBa/rAtZNIpowgIWF2WK8UFK3pAVGRGQztnbF3xaZId9Hx8aDXm/PFj1HGABeIsmzTxBi5IeeaGaMm5DwKBsYFn3uwHGlnicMQJZhSRvJMs3XE82MOzp6C3HpbI5VgU5znUthAFZrVogDmFRV2Ksdm9VVWMpjrarnCgOorz83idfpRw5WKTnN9RVJNZ7kYSdFAIre6vnCABIgoE9SYFru9fpPpMaZNY/HvxvvxqoUEp6LOskwAJs16yY6mOEO4irtV5RbJXycTrI2xsfo0Z+nGX+WgMoS3BBxDANwuc5/A4loSQWUxIY9nf6DIkfcxnY+H42MYNXv4jaUA2537bL0s/lUr2vQXA0EAvLX0NQz3MkxbmMSd/QUb4m7YLO9ypXmJ+fmpE2JgkucOVTxnSewhLy32fLLXS57ROuD62kDYKDOzoENi7GZx6ge5iSzEp3j4tZKl6v6ixEnYwCM+PunZLwF89WIqbUaOeP2xA8Jpt2Wlec02nkSyxUz0tPVW0qiajMW2EkMZLOew1oNX81BiyS1GZ35Mo7eYGbMamNiYqoMn4tiFdRCUCEMIIVkedsbUauZ8bmG+X8z8AuodjUzl59PPwAAAABJRU5ErkJggg=="
+          width="16" alt=""> <span>重置条件</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
